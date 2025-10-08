@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #A9E8E8; /* first palette color */
+  --text: #2B2B2B;
+}
+
+html, body, #root { height: 100%; color: var(--text); }
+
+/* Use Inter (Tailwind font-sans) globally */
+@layer base {
+  html {
+    font-family: theme('fontFamily.sans');
+  }
+  body {
+    @apply font-sans antialiased;
+    /* Global background image */
+    background-image: url('https://i.pinimg.com/736x/8f/85/98/8f85980fa1851da7fb4e08bfb42a991c.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    /* Fallback color while image loads */
+    background-color: var(--bg);
+  }
+}
+
+.btn-peach {
+  /* Previous peach gradient button */
+  @apply bg-gradient-to-r from-peach-200 to-peach-300 text-textsoft rounded-full px-6 py-3 shadow-soft hover:opacity-90 transition;
+}
+.card {
+  /* Translucent card over background with blur for readability */
+  @apply bg-white/70 backdrop-blur-md shadow-md rounded-2xl p-6;
+}

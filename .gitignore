@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Builds
+dist/
+build/
+.next/
+out/
+.vite/
+.cache/
+
+# Env and local
+.env
+client/.env
+server/.env
+.env.local
+.DS_Store
+*.log
+coverage/
